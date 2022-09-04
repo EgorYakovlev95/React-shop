@@ -1,0 +1,13 @@
+.wrapper {
+    flex: 0 1 100%;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @media (max-width: 1440px) {
+        padding-right: 40px;
+    }
+}

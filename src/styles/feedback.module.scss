@@ -1,0 +1,44 @@
+.wrapper {
+    margin: 0px 5rem 0px;
+}
+
+.title_h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-size: 20px;
+    color: #3D5361;;
+    letter-spacing: 0.4px;
+    line-height: 25px;
+    margin-bottom: 80px;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 130px;
+
+    .icons_current {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:not(:last-child) {
+            margin-right: 125px;
+        }
+        .img {
+            margin-bottom: 20px;
+            width: 120px;
+            height: 120px;
+        }
+        .title {
+            font-size: 26px;
+            line-height: 30px;
+            margin: 0;
+        }
+    }
+}
