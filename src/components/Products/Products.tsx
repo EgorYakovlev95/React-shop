@@ -6,22 +6,14 @@ import ProductCard from '../ProductCard/ProductCard'
 import s from './Products.module.scss'
 
 
-const Products = (props: any) => {
+const Products = () => {
 
-    const { items } = props
     const dispatch = useAppDispatch()
     const { error, loading, products } = useAppSelector(state => state.products)
 
     useEffect(() => {
         dispatch(ProductAction())
     }, [])
-
-    const filteringProducts = () => {
-        const allProducts = products.map(product => <ProductCard key={product.id} product={product}/>)
-        const filteredProducts = items?.map((item: Product) => <ProductCard key={item.id} product={item}/>)
-
-        return (items.length) ? filteredProducts : allProducts
-    }
 
     return (
         <div className={s.wrapper}>
@@ -30,7 +22,7 @@ const Products = (props: any) => {
                 {loading && <p style={{ textAlign: 'center', fontSize: '30px' }}>... Loading</p>}
                 {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
 
-                {filteringProducts()}
+                {products.map(product => <ProductCard key={product.id} product={product}/>)}
 
             </div>
         </div>

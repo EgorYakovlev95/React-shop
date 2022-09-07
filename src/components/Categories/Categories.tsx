@@ -1,31 +1,31 @@
 import axios from 'axios';
-import React from 'react';
-import { Product } from '../../model/model';
+import React, { useEffect, useState } from 'react';
+import { useAppDispatch } from '../../hooks/redux';
+import { CategoryFilter } from '../../model/model';
+import {ProductSlice} from '../../store/slices/ProductSlice';
 import s from './Categories.module.scss';
 
 
-const Categories = (props: any) => {
+const Categories = () => {
 
-    const { setItems } = props
+    const dispatch = useAppDispatch()
+    const [filter, setFilter] = useState<CategoryFilter>({category: ''})
 
-    const changeCategory = async (category: string) => {
-        const response = await axios.get(`https://fakestoreapi.com/products/category/${category}`)
-        setItems(response.data)
-    }
+    const changeHandler = (category: string) => setFilter({category})
     
-    const allProductsList = async () => {
-        const responce = await axios.get('https://fakestoreapi.com/products')
-        setItems(responce.data)
-    }
+    useEffect(() => {
+        dispatch(ProductSlice.actions.productFilter(filter))
+    }, [filter])
+
 
     return (
         <div className={s.wrapper}>
             <div className={s.categories}>
-                <button className={s.current_category} onClick={() => allProductsList()}>Все товары</button>
-                <button className={s.current_category} onClick={() => changeCategory('jewelery')}>jewelery</button>
-                <button className={s.current_category} onClick={() => changeCategory('electronics')}>electronics</button>
-                <button className={s.current_category} onClick={() => changeCategory('men\'s%20clothing')}>men's clothing</button>
-                <button className={s.current_category} onClick={() => changeCategory('women\'s%20clothing')}>women's clothing</button>
+                <button className={s.current_category} onClick={() => changeHandler('')}>Все товары</button>
+                <button className={s.current_category} onClick={() => changeHandler('jewelery')}>jewelery</button>
+                <button className={s.current_category} onClick={() => changeHandler('electronics')}>electronics</button>
+                <button className={s.current_category} onClick={() => changeHandler("men's clothing")}>men's clothing</button>
+                <button className={s.current_category} onClick={() => changeHandler("women's clothing")}>women's clothing</button>
             </div>
         </div>
     )
