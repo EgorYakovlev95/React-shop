@@ -1,4 +1,3 @@
-import { isRejectedWithValue } from '@reduxjs/toolkit';
 import axios from 'axios';
 import {AuthSlice} from '../slices/AuthSlice';
 import { AppDispatch } from './../index';

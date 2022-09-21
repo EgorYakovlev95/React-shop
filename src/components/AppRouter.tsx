@@ -14,7 +14,7 @@ const AppRouter = () => {
             <Route path='/' element={<MainPage />} />
             <Route path='/feedback' element={<Feedback />} />
             <Route path='/adress' element={<Adress />} />
-            <Route path='https://fakestoreapi.com/products/:id' element={<DetailPage />} />
+            <Route path='/products/:id' element={<DetailPage />} />
             <Route path='/login' element={<AuthPage />} />
         </Routes>
     )

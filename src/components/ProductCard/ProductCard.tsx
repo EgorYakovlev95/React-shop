@@ -7,7 +7,7 @@ interface ProductProps {product: Product}
 
 export function ProductCard ({product}: ProductProps) {
   const navigate = useNavigate()
-  const clickHandler = () => navigate('https://fakestoreapi.com/products/' + product.id)
+  const clickHandler = () => navigate('/products/' + product.id)
 
   return (
     <div className={s.card} onClick={clickHandler}>
