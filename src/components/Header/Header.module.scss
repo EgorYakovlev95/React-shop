@@ -41,6 +41,7 @@
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+        flex: 0 1 125%;
         a {
             &:not(:last-child) {
                 margin-right: 50px;
@@ -54,7 +55,7 @@
     }
     
     .enter {
-        
+        display: flex;
         span {
             margin-right: 5px;
             text-decoration:underline;
@@ -66,6 +67,22 @@
                     margin-right: 20px;
                 }
             }
+        }
+        .enter_btn {
+            width: 45%;
+            display: flex;
+            align-items: center;
+        }
+        button {
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: end;
+        }
+        .box_icon {
+            cursor: pointer;
+            width: 15%;
+            margin-right: 35px;
         }
     }
 }
