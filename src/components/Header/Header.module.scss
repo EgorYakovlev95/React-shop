@@ -73,7 +73,8 @@
             display: flex;
             align-items: center;
         }
-        button {
+        .box {
+            position: relative;
             background: none;
             border: none;
             display: flex;
@@ -83,6 +84,22 @@
             cursor: pointer;
             width: 15%;
             margin-right: 35px;
+        }
+        .box_quantity {
+            position: absolute;
+            top: -2px;
+            right: 24px;
+            border-radius: 50%;
+            padding: 3px;
+            z-index: 2;
+            font-size: 13px;
+            background: tomato;
+            color: white;
+            width: 17px;
+            height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

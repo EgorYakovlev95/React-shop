@@ -3,12 +3,14 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import ProductReducer from './slices/ProductSlice'
 import ProductDetailReducer from './slices/ProductDetailSlice'
 import AuthReducer from './slices/AuthSlice'
+import BoxReducer from './slices/BoxSlice'
 
 
 const rootReducer = combineReducers({
     products: ProductReducer,
     productDetail: ProductDetailReducer,
     auth: AuthReducer,
+    box: BoxReducer,
 })
 
 export function setupStore() {

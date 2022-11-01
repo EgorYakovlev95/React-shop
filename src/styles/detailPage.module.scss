@@ -3,12 +3,10 @@
 }
 
 .product_info {
-    margin: 0px 4% 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
-
 }
 
 .img {
@@ -30,99 +28,105 @@
 .description {
     margin-top: 20px;
     margin-bottom: 80px;
-}
-
-.box_title {
-    width: 100%;
-    border-bottom: 1px solid #D4C6BD;
-    margin-bottom: 40px;
-    color: #3D5361;
-    .title {
-        letter-spacing: 1.3px;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 23px;
-        margin-bottom: 13px;
-    }
-    .price {
-        padding-bottom: 27px;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 26px;
-        color: #000;
-        letter-spacing: 1.5px;
-    }
-}
-
-.size {
-    margin-bottom: 45px;
-    @media (min-width: 1440px) {
-        margin-bottom: 60px;
-    }
-    p {
-        font-size: 20px;
-        line-height: 23px;
-        color: #3D5361
-    }
-    .size_names {
-        display: flex;
-        width: 280px;
-        height: 35px;
-        align-items: center;
-        justify-content: center;
-        input {
-            display: none;
-        }
-        label  {
-            display: flex;
+    .box_title {
+        width: 100%;
+        border-bottom: 1px solid #D4C6BD;
+        margin-bottom: 40px;
+        color: #3D5361;
+        .title {
+            letter-spacing: 1.3px;
+            font-weight: bold;
             font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 13px;
+        }
+        .price {
+            padding-bottom: 27px;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000;
+            letter-spacing: 1.5px;
+        }
+    }
+    
+    .size {
+        margin-bottom: 45px;
+        @media (min-width: 1440px) {
+            margin-bottom: 60px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 23px;
+            color: #3D5361
+        }
+        .size_names {
+            display: flex;
+            width: 280px;
+            height: 35px;
             align-items: center;
             justify-content: center;
-            width: 68px;
-            height: 43px;
-            font-weight: bold;
-            color: #000;
-            text-align: center;
-            background-color: #D9D9D9;
-            border-radius: 10px;
-            cursor: pointer;
-            &:not(:last-child) {
-                margin-right: 16px;
+            input {
+                display: none;
             }
-            @media (max-width: 768px) {
-                font-size: 18px;
+            label  {
+                display: flex;
+                font-size: 20px;
+                align-items: center;
+                justify-content: center;
+                width: 68px;
+                height: 43px;
+                font-weight: bold;
+                color: #000;
+                text-align: center;
+                background-color: #D9D9D9;
+                border-radius: 10px;
+                cursor: pointer;
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    font-size: 18px;
+                }
             }
-            @media (min-width: 769px) and (max-width: 1024px) {
-                font-size: 18px;
+            input:checked + label {
+                border: 3px solid firebrick;
             }
         }
-        input:checked + label {
-            border: 3px solid firebrick;
+    }
+    .btns {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .btn_box {
+        width: 335px;
+        height: 52px;
+        margin-top: 10px;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        border-width: 0px;
+        font-size: 24px;
+        line-height: 28px;
+        cursor: pointer;
+        &:enabled:active {
+            box-shadow: 15px 14px 21px -15px rgba(34, 60, 80, 0.2);
+            scale: 95%;
+        }
+        @media (max-width: 768px) {
+            font-size: 18px;
+            width: 237px;
+            height: 49px;
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            font-size: 18px;
+            width: 237px;
+            height: 49px;
         }
     }
 }
 
-.btn_box {
-    width: 335px;
-    height: 52px;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    border-width: 0px;
-    font-size: 24px;
-    line-height: 28px;
-    cursor: pointer;
-    &:enabled:active {
-        box-shadow: 15px 14px 21px -15px rgba(34, 60, 80, 0.2);
-        scale: 95%;
-    }
-    @media (max-width: 768px) {
-        font-size: 18px;
-        width: 237px;
-        height: 49px;
-    }
-    @media (min-width: 769px) and (max-width: 1024px) {
-        font-size: 18px;
-        width: 237px;
-        height: 49px;
-    }
-}

@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { AuthSlice } from '../../store/slices/AuthSlice';
+import CartList from '../CartList/CartList';
 import s from './Header.module.scss'
 
 
 const Header = () => {
    const dispatch = useAppDispatch()
    const { isAuth, username } = useAppSelector(state => state.auth)
+   const items = useAppSelector(state => state.box.itemsInBox)
+   const [boxListVisible, setBoxListVisible] = useState(false)
 
    const logoutHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault()
       dispatch(AuthSlice.actions.logout())
    }
+
 
    return (
       <header className={s.main}>
@@ -30,15 +34,15 @@ const Header = () => {
                <Link to='/adress'>Адрес магазина</Link>
             </div>
             <div className={s.enter}>
-
-               <button>
+               <div className={s.box}>
                   <img 
+                     onClick={() => setBoxListVisible(!boxListVisible)}
                      className={s.box_icon} 
                      src={require("./../../assets/box/box.png")} 
-                     onClick={() => null}
                   />
-               </button>
-
+                  { items.length > 0 && <div className={s.box_quantity}>{items.length}</div> }
+                  { boxListVisible && <CartList/> }
+               </div>
                <div className={s.enter_btn}>
                   {!isAuth
                      ? <Link to='/login'>Войти</Link>
