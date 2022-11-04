@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
-import { Product } from '../../model/model'
 import { ProductAction } from '../../store/actions/ProductAction'
 import ProductCard from '../ProductCard/ProductCard'
 import s from './Products.module.scss'

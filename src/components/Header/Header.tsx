@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { AuthSlice } from '../../store/slices/AuthSlice';
@@ -16,6 +16,16 @@ const Header = () => {
       event.preventDefault()
       dispatch(AuthSlice.actions.logout())
    }
+   
+   window.addEventListener('click', (e) => {
+      e.stopPropagation()
+      const boxList = document.querySelector('.CartList_cart_list__MD8XR')
+      const clickOnBox = e.composedPath().includes(boxList!)
+
+      if (!clickOnBox) {
+         setBoxListVisible(false)
+      }
+   })
 
 
    return (
@@ -34,14 +44,14 @@ const Header = () => {
                <Link to='/adress'>Адрес магазина</Link>
             </div>
             <div className={s.enter}>
-               <div className={s.box}>
+               <div className={s.box} onClick={(e) => e.stopPropagation()}>
                   <img 
                      onClick={() => setBoxListVisible(!boxListVisible)}
-                     className={s.box_icon} 
+                     className={s.box_icon}
                      src={require("./../../assets/box/box.png")} 
                   />
                   { items.length > 0 && <div className={s.box_quantity}>{items.length}</div> }
-                  { boxListVisible && <CartList/> }
+                  { boxListVisible && <CartList /> }
                </div>
                <div className={s.enter_btn}>
                   {!isAuth

@@ -1,0 +1,41 @@
+.wrapper {
+    
+    .all_order {
+        display: flex;
+        justify-content: space-between;
+
+        .title_block {
+            margin-left: 24px;
+            padding: 5px 5px 5px 0px;
+            .title {
+                position: relative;
+                display: flex;
+                .del_item {
+                    cursor: pointer;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -3px;
+                    left: -31px;
+                    width: 14px;
+                    padding: 1px 1px 3px 7px;
+                    border: 1px solid midnightblue;
+                }
+            }
+        }
+
+        .price {
+            padding: 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .line {
+            margin: 5px auto;
+            width: 82%;
+            border-top: 1px dashed white;
+            justify-content: center;
+            opacity: 0.3;
+    }
+}
