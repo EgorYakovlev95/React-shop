@@ -1,14 +1,9 @@
 import React from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { Item } from '../../model/model'
 import { removeFromBox } from '../../store/slices/BoxSlice'
 import s from './BoxItem.module.scss'
 
-
-interface Item {
-   price: number
-   title: string
-   id: number
-}
 
 const BoxItem = ({price, title, id}: Item) => {
    const dispatch = useAppDispatch()

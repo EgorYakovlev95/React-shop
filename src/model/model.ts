@@ -14,3 +14,16 @@ export interface Product {
 export interface CategoryFilter {
     category: string
 }
+
+export interface Item {
+    price: number
+    title: string
+    id: number
+}
+
+export interface InCart {
+    title: string
+    price: number
+    id: number
+    image: string
+}

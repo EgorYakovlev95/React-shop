@@ -1,3 +1,25 @@
 .wrapper {
     margin: 0px 5rem 20px;
+    .page_title {
+        margin-bottom: 80px;
+        font-size: 35px;
+        text-align: center;
+        @media (max-width: 1440px) {
+            font-size: 30px;
+        }
+        @media (max-width: 1024px) {
+            font-size: 25px;
+        }
+    }
+    .list {
+        margin-bottom: 90px;
+        .boxIsEmpty {
+            font-size: 25px;
+            text-align: center;
+            font-style: italic;
+            span {
+                font-style: initial;
+            }
+        }
+    }
 }

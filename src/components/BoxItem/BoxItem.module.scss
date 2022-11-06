@@ -19,6 +19,9 @@
                     width: 14px;
                     padding: 1px 1px 3px 7px;
                     border: 1px solid midnightblue;
+                    @media (max-width: 1440px) {
+                        width: 12px;
+                    }
                 }
             }
         }
