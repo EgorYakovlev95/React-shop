@@ -4,21 +4,21 @@
 
 .product_info {
     display: flex;
-    justify-content: space-evenly;
-    // align-items: flex-start;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 90px;
     width: 100%;
+    @media (min-width: 426px) and (max-width: 768px) {
+        margin-bottom: 60px;
+    }
 }
 
 .img {
-    // max-width: 100%;
-    // height: 480px;
     max-width: 400px;
     max-height: 400px;
     margin-bottom: 60px;
     margin-right: 70px;
-    @media (max-width: 768px) {
+    @media (min-width: 426px) and (max-width: 768px) {
         max-height: 286px;
         max-width: 312px;
         margin-right: 60px;
@@ -37,12 +37,25 @@
         border-bottom: 1px solid #D4C6BD;
         margin-bottom: 40px;
         color: #3D5361;
+        @media (min-width: 426px) and (max-width: 768px) {
+            margin-bottom: 30px;
+        }
         .title {
             letter-spacing: 1.3px;
             font-weight: bold;
             font-size: 20px;
             line-height: 23px;
             margin-bottom: 13px;
+            @media (min-width: 426px) and (max-width: 768px) {
+                font-size: 14px;
+                margin-bottom: 5px;
+                line-height: 17px;
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                font-size: 18px;
+                line-height: 18px;
+                margin-bottom: 10px;
+            }
         }
         .price {
             padding-bottom: 27px;
@@ -51,25 +64,49 @@
             line-height: 26px;
             color: #000;
             letter-spacing: 1.5px;
+            @media (min-width: 426px) and (max-width: 768px) {
+                font-size: 16px;
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                font-size: 20px;
+                padding-bottom: 20px;
+            }
         }
     }
     
     .size {
         margin-bottom: 45px;
-        @media (min-width: 1440px) {
+        @media (min-width: 1025px) and (min-width: 1440px) {
             margin-bottom: 60px;
         }
+        @media (min-width: 426px) and (min-width: 768px) {
+            margin-bottom: 20px;
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
+        
         p {
             font-size: 20px;
             line-height: 23px;
-            color: #3D5361
+            color: #3D5361;
+            @media screen {
+                font-size: 16px;
+            }
         }
+        
         .size_names {
             display: flex;
             width: 280px;
             height: 35px;
             align-items: center;
             justify-content: center;
+            @media (min-width: 426px) and (max-width: 768px) {
+                justify-content: flex-start;
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                justify-content: start;
+            }
             input {
                 display: none;
             }
@@ -88,16 +125,35 @@
                 cursor: pointer;
                 &:not(:last-child) {
                     margin-right: 16px;
+                    @media (min-width: 426px) and (max-width: 768px) {
+                        margin-right: 10px;
+                    }
+                    @media (min-width: 769px) and (max-width: 1024px) {
+                        margin-right: 12px;
+                    }
                 }
-                @media (max-width: 768px) {
-                    font-size: 18px;
+                @media (min-width: 426px) and (max-width: 768px) {
+                    font-size: 14px;
+                    width: 35px;
+                    height: 32px;   
                 }
                 @media (min-width: 769px) and (max-width: 1024px) {
                     font-size: 18px;
+                    width: 48px;
+                    height: 40px;
+                }
+                @media (min-width: 1025px) and (max-width: 1440px) { 
+                    font-size: 20px;
                 }
             }
             input:checked + label {
                 border: 3px solid firebrick;
+                @media (min-width: 426px) and (max-width: 768px) {
+                    border-width: 2px;
+                }
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    border-width: 2px;
+                }
             }
         }
     }
@@ -121,15 +177,19 @@
             box-shadow: 15px 14px 21px -15px rgba(34, 60, 80, 0.2);
             scale: 95%;
         }
-        @media (max-width: 768px) {
-            font-size: 18px;
-            width: 237px;
-            height: 49px;
+        @media (min-width: 426px) and (max-width: 768px) {
+            font-size: 13px;
+            width: 180px;
+            height: 35px;
         }
         @media (min-width: 769px) and (max-width: 1024px) {
-            font-size: 18px;
-            width: 237px;
-            height: 49px;
+            font-size: 16px;
+            width: 235px;
+            height: 45px;
+        }
+        @media (min-width: 1025px) and (max-width: 1440px) { 
+            font-size: 21px;
+            width: 287px;
         }
     }
 }

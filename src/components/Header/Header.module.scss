@@ -2,10 +2,10 @@
     letter-spacing: 0.4px;
     margin: 50px auto;
     max-width: 1500px;
-    @media (max-width: 1440px) {
+    @media (min-width: 1025px) and (max-width: 1440px) {
         max-width: 1280px;
     }
-    @media (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
         max-width: 980px;
     }
 }
@@ -28,13 +28,21 @@
         text-decoration: none;
         color: #3D5361;
     }
-
-    @media (max-width: 1024px) {
+    
+    @media (min-width: 1025px) and (max-width: 1440px) {
+        padding: 0 120px;
+        font-size: 22px;
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
         padding: 0 75px;
         font-size: 20px;
+        border-width: 2px;
     }
-    @media (max-width: 768px) {
+    @media (min-width: 426px) and (max-width: 768px) {
         padding: 0 55px;
+        font-size: 16px;
+        height: 40px;
+        border-width: 2px;
     }
 
     .pages {
@@ -42,11 +50,19 @@
         justify-content: space-around;
         flex-direction: row;
         flex: 0 1 125%;
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            flex: 0 1 100%;
+            margin-right: 30px;
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            flex: 0 1 140%;
+            margin-right: 0;
+        }
         a {
             &:not(:last-child) {
                 margin-right: 50px;
             }
-            @media (max-width: 768px) {
+            @media (min-width: 426px) and (max-width: 768px) {
                 &:not(:last-child) {
                     margin-right: 20px;
                 }
@@ -62,7 +78,7 @@
         }
         a {
             margin-left: 10px;
-            @media (max-width: 768px) {
+            @media (min-width: 426px) and (max-width: 768px) {
                 &:not(:last-child) {
                     margin-right: 20px;
                 }
@@ -79,10 +95,16 @@
             border: none;
             display: flex;
             justify-content: end;
+            @media (min-width: 1026px) and (max-width: 1440px) {
+                margin-right: 25px;
+            }
             .box_icon {
                 cursor: pointer;
                 width: 15%;
                 margin-right: 35px;
+                @media (min-width: 426px) and (max-width: 768px) {
+                    width: 11%;
+                }
             }
         }
         .box_quantity {
@@ -100,6 +122,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media (min-width: 426px) and (max-width: 768px) {
+                right: 30px;
+                width: 10px;
+                height: 10px;
+                font-size: 9px;
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: 13px;
+                height: 13px;
+                font-size: 12px;
+                right: 29px;
+                top: -3px;
+            }
         }
     }
 }

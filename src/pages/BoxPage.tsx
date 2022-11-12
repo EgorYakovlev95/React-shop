@@ -5,7 +5,7 @@ import s from './../styles/BoxPage.module.scss'
 
 const BoxPage = () => {
    const items = useAppSelector(state => state.box.itemsInBox)
-
+   const tottalPrice = items.reduce((acc, i) => acc += (i.price), 0)
 
    return (
       <div className={s.wrapper}>
@@ -28,6 +28,14 @@ const BoxPage = () => {
             }
 
          </div>
+         {items.length > 0 && 
+            <>
+               <div className={s.line}></div>
+               <div className={s.price_sum}>
+                  Итого к оплате: {tottalPrice.toFixed(2)}&nbsp;£
+               </div>
+            </>
+         }
       </div>
    )
 }

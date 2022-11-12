@@ -10,14 +10,21 @@
         z-index: 2;
         border-radius: 15px;
         font-size: 16px;
-        @media (max-width: 1440px) {
+        @media (min-width: 1025px) and (max-width: 1440px) {
             width: 330px;
             font-size: 14px;
         }
-        @media (max-width: 1024px) {
+        @media (min-width: 769px) and (max-width: 1024px) {
             width: 300px;
             font-size: 12px;
         }
+        @media (min-width: 426px) and (max-width: 768px) {
+            width: 250px;
+            font-size: 10px;
+            top: 40px;
+            padding: 5px 15px;
+        }
+        
 
         .items {
 
@@ -39,7 +46,7 @@
             }
             a {
                 margin-left: 0;
-                @media (max-width: 1440px) {
+                @media (min-width: 1025px) and (max-width: 1440px) {
                     justify-content: center;
                     display: flex;
                 }
@@ -51,15 +58,19 @@
                     line-height: 30px;
                     padding: 0 10px;
                     cursor: pointer;
-                    @media (max-width: 1440px) {
+                    @media (min-width: 1025px) and (max-width: 1440px) {
                         font-size: 14px;
                         width: 95%;
                         line-height: 28px;
                     }
-                    @media (max-width: 1024px) {
+                    @media (min-width: 769px) and (max-width: 1024px) {
                         font-size: 12px;
                         width: 90%;
                         line-height: 25px;
+                    }
+                    @media (min-width: 426px) and (max-width: 768px) {
+                        line-height: 22px;
+                        font-size: 11px;
                     }
                 }
             }

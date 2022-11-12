@@ -1,44 +1,86 @@
 .wrapper {
     margin: 0px 5rem 0px;
-}
 
-.title_h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-}
+    .title_h1 {
+        text-align: center;
+        margin-bottom: 60px;
+        letter-spacing: 1px;
 
-.description {
-    font-size: 20px;
-    color: #3D5361;;
-    letter-spacing: 0.4px;
-    line-height: 25px;
-    margin-bottom: 80px;
-}
+        @media (min-width: 769px) and (max-width: 1024px) {
+            font-size: 30px;
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+    }
 
-.icons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 130px;
+    .description {
+        font-size: 20px;
+        color: #3D5361;
+        letter-spacing: 0.4px;
+        line-height: 25px;
+        margin-bottom: 80px;
 
-    .icons_current {
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            margin-bottom: 100px;
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            font-size: 18px;
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            font-size: 14px;
+            margin-bottom: 70px;
+            line-height: 20px;
+        }
+    }
+
+    .icons {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        &:not(:last-child) {
-            margin-right: 125px;
+        margin-bottom: 130px;
+        @media (min-width: 426px) and (max-width: 768px) {
+            margin-bottom: 110px;
         }
-        .img {
-            margin-bottom: 20px;
-            width: 120px;
-            height: 120px;
-        }
-        .title {
-            font-size: 26px;
-            line-height: 30px;
-            margin: 0;
+
+        .icons_current {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &:not(:last-child) {
+                margin-right: 90px;
+                @media (min-width: 426px) and (max-width: 768px) {
+                    margin-right: 60px;
+                }
+            }
+
+            .img {
+                margin-bottom: 20px;
+                width: 120px;
+                height: 120px;
+
+                @media (min-width: 1025px) and (max-width: 1440px) {
+                    width: 100px;
+                    height: 100px;
+                }
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    width: 90px;
+                    height: 90px;
+                }
+                @media (min-width: 426px) and (max-width: 768px) {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            .title {
+                font-size: 26px;
+                line-height: 30px;
+                margin: 0;
+            }
         }
     }
 }

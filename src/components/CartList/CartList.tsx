@@ -29,7 +29,7 @@ const CartList = () => {
                         ? <div className={s.offer}>
                             <div className={s.total_price}>
                                 <span>Итого:</span>
-                                <span>{tottalPrice}&nbsp;£</span>
+                                <span>{tottalPrice.toFixed(2)}&nbsp;£</span>
                             </div>
                             <Link to='/cart'>
                                 <button className={s.order}>Перейти к оформлению</button>

@@ -1,64 +1,109 @@
 .wrapper {
     margin: 0 3rem 0;
-}
 
-.form {
-    width: 450px;
-    margin: 10% auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+    .form {
+        width: 450px;
+        margin: 10% auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @media (min-width: 769px) and (max-width: 1024px) {
+            width: 390px;
+            margin: 14% auto;
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            margin: 13% auto;
+            width: 300px;
+        }
 
-label {
-    font-size: 20px;
-    margin-right: 20px;
-    letter-spacing: 0.6px;
-}
+        .username {
+            margin-bottom: 10px;
+        }
 
-input {
-    height: 27px;
-    width: 450px;
-    font-size: 18px;
-    letter-spacing: 0.6px;
-    color: #3D5361;
-    border: 2px solid darkgrey;
-    border-radius: 10px;
-    padding-left: 8px;
-}
+        .password {
+            margin-bottom: 20px;
+        }
 
-.username {
-    margin-bottom: 10px;
-}
 
-.password {
-    margin-bottom: 20px;
-}
+        label {
+            font-size: 20px;
+            margin-right: 20px;
+            letter-spacing: 0.6px;
+            @media (min-width: 769px) and (max-width: 1024px) {
+                font-size: 18px;
+            }
+            @media (min-width: 426px) and (max-width: 768px) {
+                font-size: 14px;
+                margin-right: 15px;
+                height: 16px;
+            }
+        }
 
-.btn {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 45px;
+        input {
+            height: 27px;
+            width: 450px;
+            font-size: 18px;
+            letter-spacing: 0.6px;
+            color: #3D5361;
+            border: 2px solid darkgrey;
+            border-radius: 10px;
+            padding-left: 8px;
+            @media (min-width: 769px) and (max-width: 1024px) {
+                height: 23px;
+                width: 390px;
+                font-size: 16px;
+            }
+            @media (min-width: 426px) and (max-width: 768px) {
+                height: 16px;
+                width: 300px;
+                font-size: 14px;
+            }
+        }
 
-    .btn_register {
-        letter-spacing: 2px;
-        border-radius: 6px;
-        font-size: 18px;
-        color: white;
-        background: blue;
-        padding: 5px 30px;
-        border: none;
+
+        .btn {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 45px;
+            @media (min-width: 769px) and (max-width: 1024px) {
+                height: 40px;
+            }
+            @media (min-width: 426px) and (max-width: 768px) {
+                height: 31px;
+            }
+
+            .btn_register {
+                letter-spacing: 2px;
+                border-radius: 6px;
+                font-size: 18px;
+                color: white;
+                background: blue;
+                padding: 5px 30px;
+                border: none;
+                @media (min-width: 426px) and (max-width: 768px) {
+                    font-size: 14px;
+                    letter-spacing: 1.3px;
+                    padding: 0px 18px;
+                }
+            }
+
+            .btn_login {
+                letter-spacing: 2px;
+                border-radius: 6px;
+                font-size: 18px;
+                color: white;
+                border: none;
+                background: seagreen;
+                padding: 5px 30px;
+                @media (min-width: 426px) and (max-width: 768px) {
+                    font-size: 14px;
+                    letter-spacing: 1.3px;
+                    padding: 0px 22px;
+                }
+            }
+        }
     }
 
-    .btn_login {
-        letter-spacing: 2px;
-        border-radius: 6px;
-        font-size: 18px;
-        color: white;
-        border: none;
-        background: seagreen;
-        padding: 5px 30px;
-    }
 }

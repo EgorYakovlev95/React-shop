@@ -7,6 +7,10 @@
     .title_h2 {
         margin-bottom: 45px;
         letter-spacing: 0.4px;
+        @media (min-width: 426px) and (max-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 37px;
+        }
     }
     .bottom_text__wrapper {
         color: #3D5361;;
@@ -14,9 +18,16 @@
     .title_h4 {
         margin-bottom: -5px;
         letter-spacing: 0.2px;
+        @media (min-width: 426px) and (max-width: 768px) {
+            font-size: 14px;
+        }
     }
     .paragraph {
         margin-bottom: 30px;
         letter-spacing: 0.4px;
+        @media (min-width: 426px) and (max-width: 768px) {
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
     }
 }
