@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import BottomDescription from '../components/BottomDescription/BottomDescription';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
+import { Product } from '../model/model';
 import { ProductDetailAction } from '../store/actions/ProductDetailAction';
 import { addToBox, removeFromBox } from '../store/slices/BoxSlice';
 import s from './../styles/detailPage.module.scss'
@@ -13,8 +14,8 @@ const DetailPage = () => {
 
     const { laoding, error, product } = useAppSelector(state => state.productDetail)
     const items = useAppSelector(state => state.box.itemsInBox)
-
-    const isItemInBox = items.some(item => item.id === product?.id)
+    
+    const isItemInBox = items.some((item: Product) => item.id === product?.id)
     const [size, setSize] = useState({size: ''})
 
 
@@ -23,9 +24,11 @@ const DetailPage = () => {
     }, [dispatch, params.id])
 
     const addItemToBox = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault()
         dispatch(addToBox(product!))
     }
     const removeItemFromBox = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault()
         dispatch(removeFromBox(product?.id))
     }
 
@@ -77,7 +80,7 @@ const DetailPage = () => {
                             : <button 
                                 className={s.btn_box}
                                 onClick={removeItemFromBox}
-                                >
+                            >
                                     Убрать из корзины
                             </button>
                         }

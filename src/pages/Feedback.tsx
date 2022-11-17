@@ -8,7 +8,7 @@ const Feedback = () => {
             <h1 className={s.title_h1}>Обратная связь</h1>
             <div className={s.description}>
                 Мы любим наших покупателей, именно поэтому мы всегда на связи! <br />
-                Свяжитесь с нами в удобной для вас соц.сети или обратитесь по телефону  +8 (800) 321 23 44
+                Свяжитесь с нами в удобной для вас соц.сети или обратитесь по телефону&nbsp;+8&nbsp;(800)&nbsp;321&nbsp;23&nbsp;44
             </div>
             <div className={s.icons}>
                 <div className={s.icons_current}>

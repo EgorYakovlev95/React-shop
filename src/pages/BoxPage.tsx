@@ -1,11 +1,12 @@
 import React from 'react'
 import BoxPageList from '../components/BoxPageList/BoxPageList'
 import { useAppSelector } from '../hooks/redux'
+import { Product } from '../model/model'
 import s from './../styles/BoxPage.module.scss'
 
 const BoxPage = () => {
    const items = useAppSelector(state => state.box.itemsInBox)
-   const tottalPrice = items.reduce((acc, i) => acc += (i.price), 0)
+   const tottalPrice = items.reduce((acc: number, i: Product) => acc += (i.price), 0)
 
    return (
       <div className={s.wrapper}>
@@ -13,7 +14,7 @@ const BoxPage = () => {
          <div className={s.list}>
 
             {items.length > 0
-               ? items.map((item) => 
+               ? items.map((item: Product) => 
                   <BoxPageList
                      key={item.id} 
                      price={item.price} 

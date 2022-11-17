@@ -1,11 +1,14 @@
 .wrapper {
-    margin: 0px 5rem 0px;
+    margin: 0px 5rem;
+    @media (min-width: 376px) and (max-width: 430px) {
+        margin: 0px 2rem 100px;
+    }
 
     .title_h1 {
         text-align: center;
         margin-bottom: 50px;
         letter-spacing: 1px;
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             font-size: 20px;
         }
     }
@@ -16,29 +19,38 @@
         justify-content: center;
         align-items: center;
 
-        @media (max-width: 768px) {
-            margin: 0px 7px 60px;
-        }
-
         @media (min-width: 769px) and (max-width: 1024px) {
             margin: 0px 7px 80px;
         }
-
+        @media (min-width: 431px) and (max-width: 768px) {
+            margin: 0px 7px 60px;
+        }
+        @media (min-width: 376px) and (max-width: 430px) {
+            flex-direction: column;
+            margin: 0;
+        }
+        
         .img {
             width: 562px;
             height: 374px;
             margin-right: 40px;
+            
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: 470px;
+                height: 309px;
+                margin-right: 20px;
+            }
 
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 width: 300px;
                 height: 210px;
                 margin-right: 0px;
             }
 
-            @media (min-width: 769px) and (max-width: 1024px) {
-                width: 470px;
-                height: 309px;
-                margin-right: 20px;
+            @media (min-width: 376px) and (max-width: 430px) {
+                margin: 0 0 35px 0;
+                width: 320px;
+                height: 235px;
             }
         }
 
@@ -55,11 +67,18 @@
                 line-height: 34px;
                 letter-spacing: 0.2px;
             }
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 margin-left: 40px;
                 font-size: 16px;
                 line-height: 26px;
                 letter-spacing: 0.1px;
+            }
+
+            @media (min-width: 376px) and (max-width: 430px) {
+                margin: 0 0 90px 0;
+                letter-spacing: 0;
+                line-height: 32px;
+                font-size: 22px;
             }
 
         }

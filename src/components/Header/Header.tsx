@@ -1,16 +1,17 @@
-import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { AuthSlice } from '../../store/slices/AuthSlice';
 import CartList from '../CartList/CartList';
 import s from './Header.module.scss'
-
 
 const Header = () => {
    const dispatch = useAppDispatch()
    const { isAuth, username } = useAppSelector(state => state.auth)
    const items = useAppSelector(state => state.box.itemsInBox)
    const [boxListVisible, setBoxListVisible] = useState(false)
+   const navigate = useNavigate()
+   const windowWidth = document.documentElement.clientWidth;
 
    const logoutHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault()
@@ -27,6 +28,26 @@ const Header = () => {
       }
    })
 
+   const routHandler = (event: React.MouseEvent<HTMLImageElement>) => {
+      if (windowWidth > 430) {
+         setBoxListVisible(!boxListVisible)
+      } else {
+         navigate('/cart')
+      }
+   }
+
+   const ShowMenu = (event: React.MouseEvent<HTMLSpanElement>) => {
+      const div = document.getElementById('1');
+      
+      if (windowWidth < 431) {
+         if (div?.classList.contains('Header_pages__xDiLq')) {
+            div.classList.replace('Header_pages__xDiLq', 'Header_active__OcOMM')
+         } else {
+            div?.classList.replace('Header_active__OcOMM', 'Header_pages__xDiLq')
+         }
+      } 
+   }
+
 
    return (
       <header className={s.main}>
@@ -38,24 +59,42 @@ const Header = () => {
             </svg>
          </div>
          <div className={s.links}>
-            <div className={s.pages}>
-               <Link to='/'>Каталог</Link>
-               <Link to='/feedback'>Обратная связь</Link>
-               <Link to='/adress'>Адрес магазина</Link>
+            <div>
+               <span 
+                  className={s.mobile_menu}
+                  onClick={ShowMenu}
+               >
+                  Меню&nbsp;<img src={require('./../../assets/mobile-menu/menu.png')} alt="" />
+               </span>
+               <div className={s.pages} id='1'>
+                  <Link onClick={ShowMenu} to='/'>Каталог</Link>
+                  <Link onClick={ShowMenu} to='/feedback'>Обратная связь</Link>
+                  <Link onClick={ShowMenu} to='/adress'>Адрес магазина</Link>
+               </div>
             </div>
             <div className={s.enter}>
                <div className={s.box} onClick={(e) => e.stopPropagation()}>
                   <img 
-                     onClick={() => setBoxListVisible(!boxListVisible)}
+                     onClick={routHandler}
                      className={s.box_icon}
                      src={require("./../../assets/box/box.png")} 
                   />
                   { items.length > 0 && <div className={s.box_quantity}>{items.length}</div> }
-                  { boxListVisible && <CartList /> }
+                  
+                  {windowWidth > 430 && boxListVisible
+                     ? <CartList />
+                     : null
+                  }
+
                </div>
                <div className={s.enter_btn}>
                   {!isAuth
-                     ? <Link to='/login'>Войти</Link>
+                     ? <>
+                        <Link className={s.login} to='/login'>Войти</Link>
+                        <Link className={s.login_icon} to='/login'>
+                           <img src={require('./../../assets/mobile-menu/enter.png')} alt="" />
+                        </Link>
+                     </>
                      : <>
                         <span>{username}</span> /
                         <a href="#" onClick={logoutHandler}>Выйти</a>

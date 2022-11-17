@@ -1,5 +1,8 @@
 .wrapper {
     margin: 0px 5rem 0px;
+    @media (min-width: 376px) and (max-width: 430px) {
+        margin: 0px 2rem 0px;
+    }
 
     .title_h1 {
         text-align: center;
@@ -9,7 +12,7 @@
         @media (min-width: 769px) and (max-width: 1024px) {
             font-size: 30px;
         }
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             font-size: 20px;
             margin-bottom: 35px;
         }
@@ -28,7 +31,7 @@
         @media (min-width: 769px) and (max-width: 1024px) {
             font-size: 18px;
         }
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             font-size: 14px;
             margin-bottom: 70px;
             line-height: 20px;
@@ -40,8 +43,12 @@
         display: flex;
         justify-content: center;
         margin-bottom: 130px;
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             margin-bottom: 110px;
+        }
+        @media (min-width: 376px) and (max-width: 430px) {
+            flex-direction: column;
+            margin-bottom: 100px;
         }
 
         .icons_current {
@@ -49,11 +56,21 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @media (min-width: 376px) and (max-width: 430px) {
+                flex-direction: column-reverse;
+                margin-bottom: 40px;
+            }
 
             &:not(:last-child) {
                 margin-right: 90px;
-                @media (min-width: 426px) and (max-width: 768px) {
+                @media (min-width: 431px) and (max-width: 768px) {
                     margin-right: 60px;
+                }
+                @media (min-width: 376px) and (max-width: 430px) {
+                    margin-right: 0;
+                }
+                p {
+                    margin: 0 0 17px 0;
                 }
             }
 
@@ -70,9 +87,13 @@
                     width: 90px;
                     height: 90px;
                 }
-                @media (min-width: 426px) and (max-width: 768px) {
+                @media (min-width: 431px) and (max-width: 768px) {
                     width: 70px;
                     height: 70px;
+                }
+                @media (min-width: 376px) and (max-width: 430px) {
+                    width: 150px;
+                    height: 150px;
                 }
             }
 

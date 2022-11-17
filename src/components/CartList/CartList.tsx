@@ -1,20 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAppSelector } from '../../hooks/redux'
+import { Product } from '../../model/model'
 import BoxItem from '../BoxItem/BoxItem'
 import s from './CartList.module.scss'
 
 
 const CartList = () => {
     const items = useAppSelector(state => state.box.itemsInBox)
-    const tottalPrice = items.reduce((acc, i) => acc += i.price, 0)
+    const tottalPrice = items.reduce((acc: number, i: Product) => acc += i.price, 0)
 
     return (
         <div className={s.wrapper}>
             <div className={s.cart_list}>
                 <div className={s.items}>
                     {items.length > 0
-                        ? items.map((item) => 
+                        ? items.map((item: Product) => 
                             <BoxItem
                                 key={item.id} 
                                 price={item.price} 

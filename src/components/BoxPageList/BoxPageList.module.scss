@@ -1,20 +1,39 @@
 .wrapper {
     margin: 20px 150px 40px;
 
-    @media (min-width: 426px) and (max-width: 768px) {
+    @media (min-width: 431px) and (max-width: 768px) {
         margin: 0px 50px;
     }
+    @media (min-width: 376px) and (max-width: 430px) {
+        margin: 0;
+    }
+
 
     .product_list {
         display: flex;
         max-height: 150px;
         align-items: center;
+        @media (min-width: 431px) and (max-width: 768px) {
+            max-height: 100px;
+            margin-left: 20px;
+        }
+        @media (min-width: 376px) and (max-width: 430px) {
+            margin-bottom: 50px;
+        }
 
         .imgage {
             width: 150px;
             margin-bottom: 15px;
             display: flex;
             position: relative;
+            @media (min-width: 376px) and (max-width: 430px) {
+                width: 95px;
+                margin-bottom: 20px;
+            }
+            @media (min-width: 431px) and (max-width: 768px) {
+                width: 100px;
+
+            }
 
             .del_item {
                 cursor: pointer;
@@ -26,33 +45,57 @@
                 padding: 0px 0px 3px 9px;
                 border: 1px solid midnightblue;
                 border-radius: 20%;
-
-                @media (min-width: 426px) and (max-width: 768px) {
+                
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    width: 18px;
+                    padding: 0px 0px 3px 8px;
+                    font-size: 23px;
+                }
+                @media (min-width: 431px) and (max-width: 768px) {
                     font-size: 14px;
                     width: 11px;
                     padding: 0px 0px 2px 4px;
                     top: 20px;
                     left: -54px;
                 }
-                @media (min-width: 769px) and (max-width: 1024px) {
-                    width: 18px;
-                    padding: 0px 0px 3px 8px;
-                    font-size: 23px;
+                @media (min-width: 376px) and (max-width: 430px) {
+                    display: none;
+                }
+            }
+
+            .del_item_mob {
+                display: none;
+                
+                @media (min-width: 376px) and (max-width: 430px) {
+                    background: floralwhite;
+                    position: absolute;
+                    display: inline-block;
+                    bottom: -33px;
+                    width: 150px;
+                    left: 0;
+                    border: 1px solid;
+                    font-size: 16px;
+                    border-radius: 20px;
+                    text-align: center;
+                    padding: 3px 2px;
                 }
             }
 
             img {
                 max-width: 150px;
-                height: 130px;
-
-                @media (min-width: 426px) and (max-width: 768px) {
-                    max-height: 60px;
-                    max-width: 80px;
-                }
+                max-height: 130px;
 
                 @media (min-width: 769px) and (max-width: 1024px) {
                     max-height: 90px;
                     max-width: 140px;
+                }
+                @media (min-width: 431px) and (max-width: 768px) {
+                    max-height: 60px;
+                    max-width: 80px;
+                }
+                @media (min-width: 376px) and (max-width: 430px) {
+                    max-width: 95px;
+                    max-height: 85px;
                 }
             }
         }
@@ -65,11 +108,17 @@
             font-style: italic;
             margin-left: 20px;
 
-            @media (min-width: 426px) and (max-width: 768px) {
-                font-size: 12px;
-            }
             @media (min-width: 769px) and (max-width: 1024px) {
                 font-size: 16px;
+            }
+            @media (min-width: 431px) and (max-width: 768px) {
+                font-size: 12px;
+                width: 220px;
+            }
+            @media (min-width: 376px) and (max-width: 430px) {
+                font-size: 16px;
+                width: 185px;
+                margin-left: 15px;
             }
         }
 
@@ -78,11 +127,15 @@
             font-style: italic;
             margin-left: 65px;
 
-            @media (min-width: 426px) and (max-width: 768px) {
-                font-size: 13px;
-            }
             @media (min-width: 769px) and (max-width: 1024px) {
                 font-size: 16px;
+            }
+            @media (min-width: 431px) and (max-width: 768px) {
+                font-size: 13px;
+            }
+            @media (min-width: 376px) and (max-width: 430px) {
+                font-size: 18px;
+                margin-left: 10px;
             }
         }
     }

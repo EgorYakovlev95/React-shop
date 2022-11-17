@@ -20,6 +20,7 @@ const Categories = () => {
 
     return (
         <div className={s.wrapper}>
+            <div className={s.filter_image}><img src={require('./../../assets/filters/filter.png')} alt="" /></div>
             <div className={s.categories}>
                 <button className={s.current_category} onClick={() => changeHandler('')}>Все товары</button>
                 <button className={s.current_category} onClick={() => changeHandler('jewelery')}>jewelery</button>

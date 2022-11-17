@@ -8,11 +8,19 @@
     @media (min-width: 769px) and (max-width: 1024px) {
         max-width: 980px;
     }
+    @media (min-width: 376px) and (max-width: 430px) {
+        margin: 40px auto 100px;
+    }
 }
 
 .logo {
     text-align: center;
     margin-bottom: 25px;
+    @media (min-width: 376px) and (max-width: 430px) {
+        border-bottom: 1px solid darkgrey;
+        padding-bottom: 20px;
+        width: 98%;
+    }
 }
 
 .links {
@@ -24,6 +32,18 @@
     font-size: 25px;
     height: 50px;
     padding: 0 120px;
+
+    .mobile_menu {
+        display: none;
+        @media (min-width: 376px) and (max-width: 430px) {
+            font-size: 23px;
+            margin-left: 15px;
+            display: flex;
+            img {
+                width: 26px;
+            }
+        }
+    }
     a {
         text-decoration: none;
         color: #3D5361;
@@ -38,11 +58,22 @@
         font-size: 20px;
         border-width: 2px;
     }
-    @media (min-width: 426px) and (max-width: 768px) {
+    @media (min-width: 431px) and (max-width: 768px) {
         padding: 0 55px;
         font-size: 16px;
         height: 40px;
         border-width: 2px;
+    }
+    @media (min-width: 376px) and (max-width: 430px) {
+        border-width: 2px;
+        font-size: 16px;
+        height: 70px;
+        width: 100%;
+        padding: 0 20px;
+        position: fixed;
+        z-index: 3;
+        bottom: 0px;
+        background: #F5F5F5;
     }
 
     .pages {
@@ -58,27 +89,71 @@
             flex: 0 1 140%;
             margin-right: 0;
         }
+        @media (min-width: 376px) and (max-width: 430px) {
+            display: none;
+        }
         a {
             &:not(:last-child) {
                 margin-right: 50px;
             }
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 &:not(:last-child) {
                     margin-right: 20px;
                 }
             }
         }
     }
+    .active {
+
+        @media (min-width: 376px) and (max-width: 430px) {
+            display: flex;
+            border-radius: 9px;
+            flex-direction: column;
+            position: absolute;
+            top: -186px;
+            font-size: 18px;
+            left: 20px;
+            letter-spacing: 1px;
+            padding: 20px 15px 33px 15px;
+            z-index: 3;
+            width: 77%;
+            background: wheat;
+            animation: border 0.7s;
+
+            @keyframes border {
+                from {
+                    opacity: 0;
+                    top: -145px;
+                }
+            }
+            
+            a {
+                border: 1px solid;
+                padding: 7px;
+                font-size: 20px;
+                border-radius: 5px;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
     
     .enter {
         display: flex;
+        @media (min-width: 376px) and (max-width: 430px) {
+            width: 60%;
+            margin-left: 10px;
+        }
         span {
             margin-right: 5px;
             text-decoration:underline;
         }
         a {
             margin-left: 10px;
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 &:not(:last-child) {
                     margin-right: 20px;
                 }
@@ -88,6 +163,29 @@
             width: 45%;
             display: flex;
             align-items: center;
+            @media (min-width: 376px) and (max-width: 430px) {
+                justify-content: end;
+                margin-right: 23px;
+            }
+            .login {
+                @media (min-width: 376px) and (max-width: 430px) {
+                    display: none;
+                }
+            }
+            .login_icon {
+                display: none;
+                @media (min-width: 376px) and (max-width: 430px) {
+                    display: flex;
+                    align-items: center;
+                }
+                img {
+                    @media (min-width: 376px) and (max-width: 430px) {
+                        width: 42px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
         }
         .box {
             position: relative;
@@ -98,12 +196,22 @@
             @media (min-width: 1026px) and (max-width: 1440px) {
                 margin-right: 25px;
             }
+            @media (min-width: 376px) and (max-width: 425px) {
+                justify-content: space-around;
+            }
             .box_icon {
                 cursor: pointer;
-                width: 15%;
+                width: 43px;
                 margin-right: 35px;
-                @media (min-width: 426px) and (max-width: 768px) {
-                    width: 11%;
+                @media (min-width: 431px) and (max-width: 768px) {
+                    width: 28px;
+                }
+                @media (min-width: 376px) and (max-width: 430px) {
+                    width: 44px;
+                    margin-right: 41px;
+                }
+                @media (min-width: 1025px) and (max-width: 1440px) {
+                    width: 43px;
                 }
             }
         }
@@ -122,18 +230,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 right: 30px;
                 width: 10px;
                 height: 10px;
                 font-size: 9px;
             }
             @media (min-width: 769px) and (max-width: 1024px) {
-                width: 13px;
-                height: 13px;
-                font-size: 12px;
-                right: 29px;
-                top: -3px;
+                width: 15px;
+                height: 15px;
+                font-size: 15px;
+                right: 31px;
+                top: 0px;
+            }
+            @media (min-width: 376px) and (max-width: 430px) {
+                right: 36px;
+                top: -7px;
             }
         }
     }

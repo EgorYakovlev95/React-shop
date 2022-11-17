@@ -1,5 +1,8 @@
 .wrapper {
     margin: 0px 5rem 20px;
+    @media (min-width: 376px) and (max-width: 428px) {
+        margin: 0px 2rem 100px;
+    }
 }
 
 .product_info {
@@ -8,8 +11,12 @@
     align-items: center;
     margin-bottom: 90px;
     width: 100%;
-    @media (min-width: 426px) and (max-width: 768px) {
+    @media (min-width: 431px) and (max-width: 768px) {
         margin-bottom: 60px;
+    }
+    @media (min-width: 376px) and (max-width: 430px) {
+        flex-direction: column;
+        margin-bottom: 40px;
     }
 }
 
@@ -18,7 +25,7 @@
     max-height: 400px;
     margin-bottom: 60px;
     margin-right: 70px;
-    @media (min-width: 426px) and (max-width: 768px) {
+    @media (min-width: 431px) and (max-width: 768px) {
         max-height: 286px;
         max-width: 312px;
         margin-right: 60px;
@@ -26,6 +33,11 @@
     @media (min-width: 769px) and (max-width: 1024px) {
         max-height: 271px;
         max-width: 383px;
+    }
+    @media (min-width: 376px) and (max-width: 430px) {
+        margin-right: 0;
+        max-width: 360px;
+        max-height: 370px;
     }
 }
 
@@ -37,7 +49,7 @@
         border-bottom: 1px solid #D4C6BD;
         margin-bottom: 40px;
         color: #3D5361;
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             margin-bottom: 30px;
         }
         .title {
@@ -46,7 +58,7 @@
             font-size: 20px;
             line-height: 23px;
             margin-bottom: 13px;
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 font-size: 14px;
                 margin-bottom: 5px;
                 line-height: 17px;
@@ -56,6 +68,9 @@
                 line-height: 18px;
                 margin-bottom: 10px;
             }
+            @media (min-width: 376px) and (max-width: 430px) {
+                text-align: center;
+            }
         }
         .price {
             padding-bottom: 27px;
@@ -64,12 +79,15 @@
             line-height: 26px;
             color: #000;
             letter-spacing: 1.5px;
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 font-size: 16px;
             }
             @media (min-width: 769px) and (max-width: 1024px) {
                 font-size: 20px;
                 padding-bottom: 20px;
+            }
+            @media (min-width: 376px) and (max-width: 430px) {
+                text-align: center;
             }
         }
     }
@@ -79,7 +97,7 @@
         @media (min-width: 1025px) and (min-width: 1440px) {
             margin-bottom: 60px;
         }
-        @media (min-width: 426px) and (min-width: 768px) {
+        @media (min-width: 431px) and (min-width: 768px) {
             margin-bottom: 20px;
         }
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -90,9 +108,6 @@
             font-size: 20px;
             line-height: 23px;
             color: #3D5361;
-            @media screen {
-                font-size: 16px;
-            }
         }
         
         .size_names {
@@ -101,15 +116,20 @@
             height: 35px;
             align-items: center;
             justify-content: center;
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 justify-content: flex-start;
             }
             @media (min-width: 769px) and (max-width: 1024px) {
                 justify-content: start;
             }
+            @media (min-width: 376px) and (max-width: 430px) {
+                width: 100%;
+            }
+
             input {
                 display: none;
             }
+
             label  {
                 display: flex;
                 font-size: 20px;
@@ -125,14 +145,18 @@
                 cursor: pointer;
                 &:not(:last-child) {
                     margin-right: 16px;
-                    @media (min-width: 426px) and (max-width: 768px) {
+                    @media (min-width: 431px) and (max-width: 768px) {
                         margin-right: 10px;
                     }
                     @media (min-width: 769px) and (max-width: 1024px) {
                         margin-right: 12px;
                     }
                 }
-                @media (min-width: 426px) and (max-width: 768px) {
+                @media (min-width: 376px) and (max-width: 430px) {
+                    height: 55px;
+                    font-size: 23px;
+                }
+                @media (min-width: 431px) and (max-width: 768px) {
                     font-size: 14px;
                     width: 35px;
                     height: 32px;   
@@ -148,7 +172,7 @@
             }
             input:checked + label {
                 border: 3px solid firebrick;
-                @media (min-width: 426px) and (max-width: 768px) {
+                @media (min-width: 431px) and (max-width: 768px) {
                     border-width: 2px;
                 }
                 @media (min-width: 769px) and (max-width: 1024px) {
@@ -159,8 +183,9 @@
     }
     .btns {
         display: flex;
-        flex-direction: column;
-
+        @media (min-width: 376px) and (max-width: 430px) {
+            justify-content: center;
+        }
     }
     
     .btn_box {
@@ -177,7 +202,10 @@
             box-shadow: 15px 14px 21px -15px rgba(34, 60, 80, 0.2);
             scale: 95%;
         }
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 376px) and (max-width: 430px) {
+            font-size: 22px;
+        }
+        @media (min-width: 431px) and (max-width: 768px) {
             font-size: 13px;
             width: 180px;
             height: 35px;

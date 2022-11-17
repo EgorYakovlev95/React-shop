@@ -17,9 +17,13 @@ export const BoxSlice = createSlice({
     reducers: {
         addToBox(state, action: PayloadAction<Product>) {
             state.itemsInBox.push(action.payload)
+            
+            // localStorage.setItem('products', JSON.stringify(action.payload.id))
         },
         removeFromBox(state, action: PayloadAction<any>) {
             state.itemsInBox = state.itemsInBox.filter((item: Product) => item.id !== action.payload)
+
+            // localStorage.removeItem('products')
         }
     }
 })

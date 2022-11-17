@@ -1,5 +1,8 @@
 .wrapper {
     margin: 0px 5rem 20px;
+    @media (min-width: 376px) and (max-width: 430px) {
+        margin: 0px 1rem 20px;
+    }
     .page_title {
         margin-bottom: 80px;
         font-size: 35px;
@@ -10,14 +13,18 @@
         @media (min-width: 769px) and (max-width: 1024px) {
             font-size: 25px;
         }
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             font-size: 20px;
             margin-bottom: 50px;
+        }
+        @media (min-width: 376px) and (max-width: 430px) {
+            margin-bottom: 50px;
+            font-size: 30px;
         }
     }
     .list {
         margin-bottom: 90px;
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 431px) and (max-width: 768px) {
             margin-bottom: 50px;
         }
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -30,8 +37,11 @@
             span {
                 font-style: initial;
             }
-            @media (min-width: 426px) and (max-width: 768px) {
+            @media (min-width: 431px) and (max-width: 768px) {
                 font-size: 15px;
+            }
+            @media (min-width: 376px) and (max-width: 430px) {
+                font-size: 22px;
             }
         }
     }
@@ -44,11 +54,14 @@
     .price_sum {
         margin-bottom: 50px;
         font-size: 22px;
-        @media (min-width: 426px) and (max-width: 768px) {
-            font-size: 18px;
+        @media (min-width: 431px) and (max-width: 768px) {
+            font-size: 16px;
         }
         @media (min-width: 769px) and (max-width: 1024px) {
             font-size: 18px;
+        }
+        @media (min-width: 376px) and (max-width: 430px) {
+            margin-bottom: 120px;
         }
     }
 }
