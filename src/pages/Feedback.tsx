@@ -1,6 +1,9 @@
 import React from 'react'
 import BottomDescription from '../components/BottomDescription/BottomDescription';
 import s from './../styles/feedback.module.scss';
+import WhatsappImage from './../assets/feedbackPage/whatsapp.png'
+import InstagramImage from './../assets/feedbackPage/instagram.png'
+import YoutubeImage from './../assets/feedbackPage/YOUTUBE.png'
 
 const Feedback = () => {
     return (
@@ -12,15 +15,15 @@ const Feedback = () => {
             </div>
             <div className={s.icons}>
                 <div className={s.icons_current}>
-                    <img className={s.img} src={require("./../assets/feedbackPage/whatsapp.png")} alt="" />
+                    <img className={s.img} src={WhatsappImage} alt="" />
                     <p className={s.title}>WhatsApp</p>
                 </div>
                 <div className={s.icons_current}>
-                    <img className={s.img} src={require("./../assets/feedbackPage/instagram.png")} alt="" />
+                    <img className={s.img} src={InstagramImage} alt="" />
                     <p className={s.title}>Instagram</p>
                 </div>
                 <div className={s.icons_current}>
-                    <img className={s.img} src={require("./../assets/feedbackPage/YOUTUBE.png")} alt="" />
+                    <img className={s.img} src={YoutubeImage} alt="" />
                     <p className={s.title}>YouTube</p>
                 </div>
             </div>

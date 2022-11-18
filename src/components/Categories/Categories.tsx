@@ -4,6 +4,7 @@ import { useAppDispatch } from '../../hooks/redux';
 import { CategoryFilter } from '../../model/model';
 import {ProductSlice} from '../../store/slices/ProductSlice';
 import s from './Categories.module.scss';
+import FilterImage from './../../assets/filters/filter.png'
 
 
 const Categories = () => {
@@ -20,7 +21,7 @@ const Categories = () => {
 
     return (
         <div className={s.wrapper}>
-            <div className={s.filter_image}><img src={require('./../../assets/filters/filter.png')} alt="" /></div>
+            <div className={s.filter_image}><img src={FilterImage} alt="" /></div>
             <div className={s.categories}>
                 <button className={s.current_category} onClick={() => changeHandler('')}>Все товары</button>
                 <button className={s.current_category} onClick={() => changeHandler('jewelery')}>jewelery</button>

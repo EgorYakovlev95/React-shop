@@ -4,6 +4,10 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { AuthSlice } from '../../store/slices/AuthSlice';
 import CartList from '../CartList/CartList';
 import s from './Header.module.scss'
+import LoginImage from './../../assets/mobile-menu/enter.png'
+import BoxImage from './../../assets/box/box.png'
+import MenuImage from './../../assets/mobile-menu/menu.png'
+
 
 const Header = () => {
    const dispatch = useAppDispatch()
@@ -64,7 +68,7 @@ const Header = () => {
                   className={s.mobile_menu}
                   onClick={ShowMenu}
                >
-                  Меню&nbsp;<img src={require('./../../assets/mobile-menu/menu.png')} alt="" />
+                  Меню&nbsp;<img src={MenuImage} alt="" />
                </span>
                <div className={s.pages} id='1'>
                   <Link onClick={ShowMenu} to='/'>Каталог</Link>
@@ -77,7 +81,7 @@ const Header = () => {
                   <img 
                      onClick={routHandler}
                      className={s.box_icon}
-                     src={require("./../../assets/box/box.png")} 
+                     src={BoxImage} 
                   />
                   { items.length > 0 && <div className={s.box_quantity}>{items.length}</div> }
                   
@@ -92,7 +96,7 @@ const Header = () => {
                      ? <>
                         <Link className={s.login} to='/login'>Войти</Link>
                         <Link className={s.login_icon} to='/login'>
-                           <img src={require('./../../assets/mobile-menu/enter.png')} alt="" />
+                           <img src={LoginImage} alt="" />
                         </Link>
                      </>
                      : <>

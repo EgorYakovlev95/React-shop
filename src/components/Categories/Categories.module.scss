@@ -13,7 +13,7 @@
         top: 113px;
         left: 0;
         width: 98%;
-        height: 45px;
+        height: 30px;
         padding-bottom: 10px;
         border-bottom: 1px solid darkgrey;
     }
@@ -28,7 +28,7 @@
             img {
                 width: 30px;
                 height: 30px;
-                padding: 7px 12px 9px;
+                padding: 0px 12px;
             }
         }
     }
@@ -86,6 +86,7 @@
                 text-decoration: none;
                 color: initial;
                 padding: 2px 5px;
+                white-space: nowrap;
             }
 
             &::first-letter {
