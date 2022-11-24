@@ -11,12 +11,20 @@
     @media (min-width: 376px) and (max-width: 430px) {
         margin: 40px auto 50px;
     }
+    @media (min-width: 321px) and (max-width: 375px) {
+        margin: 40px auto 50px;
+    }
 }
 
 .logo {
     text-align: center;
     margin-bottom: 25px;
     @media (min-width: 376px) and (max-width: 430px) {
+        border-bottom: 1px solid darkgrey;
+        padding-bottom: 20px;
+        width: 98%;
+    }
+    @media (min-width: 321px) and (max-width: 375px) {
         border-bottom: 1px solid darkgrey;
         padding-bottom: 20px;
         width: 98%;
@@ -41,6 +49,14 @@
             display: flex;
             img {
                 width: 26px;
+            }
+        }
+        @media (min-width: 321px) and (max-width: 375px) {
+            font-size: 20px;
+            margin-left: 5px;
+            display: flex;
+            img {
+                width: 24px;
             }
         }
     }
@@ -75,6 +91,17 @@
         bottom: 0px;
         background: #F5F5F5;
     }
+    @media (min-width: 321px) and (max-width: 375px) {
+        border-width: 2px;
+        font-size: 16px;
+        height: 70px;
+        width: 100%;
+        padding: 0 20px;
+        position: fixed;
+        z-index: 3;
+        bottom: 0px;
+        background: #F5F5F5;
+    }
 
     .pages {
         display: flex;
@@ -90,6 +117,9 @@
             margin-right: 0;
         }
         @media (min-width: 376px) and (max-width: 430px) {
+            display: none;
+        }
+        @media (min-width: 321px) and (max-width: 375px) {
             display: none;
         }
         a {
@@ -138,12 +168,49 @@
                 }
             }
         }
+        @media (min-width: 321px) and (max-width: 375px) {
+            display: flex;
+            border-radius: 9px;
+            flex-direction: column;
+            position: absolute;
+            top: -186px;
+            font-size: 18px;
+            left: 20px;
+            letter-spacing: 1px;
+            padding: 20px 15px 33px 15px;
+            z-index: 3;
+            width: 77%;
+            background: wheat;
+            animation: border 0.7s;
+
+            @keyframes border {
+                from {
+                    opacity: 0;
+                    top: -145px;
+                }
+            }
+            
+            a {
+                border: 1px solid;
+                padding: 7px;
+                font-size: 20px;
+                border-radius: 5px;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
     }
 
     
     .enter {
         display: flex;
         @media (min-width: 376px) and (max-width: 430px) {
+            width: 60%;
+            margin-left: 10px;
+        }
+        @media (min-width: 321px) and (max-width: 375px) {
             width: 60%;
             margin-left: 10px;
         }
@@ -158,6 +225,11 @@
                     margin-right: 20px;
                 }
             }
+            @media (min-width: 321px) and (max-width: 375px) {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
         }
         .enter_btn {
             width: 45%;
@@ -167,8 +239,15 @@
                 justify-content: end;
                 margin-right: 23px;
             }
+            @media (min-width: 321px) and (max-width: 375px) {
+                justify-content: end;
+                margin-right: 23px;
+            }
             .login {
                 @media (min-width: 376px) and (max-width: 430px) {
+                    display: none;
+                }
+                @media (min-width: 321px) and (max-width: 375px) {
                     display: none;
                 }
             }
@@ -178,8 +257,16 @@
                     display: flex;
                     align-items: center;
                 }
+                @media (min-width: 321px) and (max-width: 375px) {
+                    display: flex;
+                    align-items: center;
+                }
                 img {
                     @media (min-width: 376px) and (max-width: 430px) {
+                        width: 42px;
+                        margin-right: 10px;
+                    }
+                    @media (min-width: 321px) and (max-width: 375px) {
                         width: 42px;
                         margin-right: 10px;
                     }
@@ -199,10 +286,16 @@
             @media (min-width: 376px) and (max-width: 425px) {
                 justify-content: space-around;
             }
+            @media (min-width: 321px) and (max-width: 375px) {
+                justify-content: space-around;
+            }
             .box_icon {
                 cursor: pointer;
                 width: 43px;
                 margin-right: 35px;
+                @media (min-width: 1025px) and (max-width: 1440px) {
+                    width: 43px;
+                }
                 @media (min-width: 431px) and (max-width: 768px) {
                     width: 28px;
                 }
@@ -210,8 +303,10 @@
                     width: 44px;
                     margin-right: 41px;
                 }
-                @media (min-width: 1025px) and (max-width: 1440px) {
-                    width: 43px;
+                @media (min-width: 321px) and (max-width: 375px) {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 40px;
                 }
             }
         }
@@ -230,12 +325,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            @media (min-width: 431px) and (max-width: 768px) {
-                right: 30px;
-                width: 10px;
-                height: 10px;
-                font-size: 9px;
-            }
             @media (min-width: 769px) and (max-width: 1024px) {
                 width: 15px;
                 height: 15px;
@@ -243,7 +332,17 @@
                 right: 31px;
                 top: 0px;
             }
+            @media (min-width: 431px) and (max-width: 768px) {
+                right: 30px;
+                width: 10px;
+                height: 10px;
+                font-size: 9px;
+            }
             @media (min-width: 376px) and (max-width: 430px) {
+                right: 36px;
+                top: -7px;
+            }
+            @media (min-width: 321px) and (max-width: 375px) {
                 right: 36px;
                 top: -7px;
             }

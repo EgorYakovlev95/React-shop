@@ -3,6 +3,9 @@
     @media (min-width: 376px) and (max-width: 430px) {
         margin: 0px 2rem 0px;
     }
+    @media (min-width: 321px) and (max-width: 375px) {
+        margin: 0px 1rem 0px;
+    }
 
     .title_h1 {
         text-align: center;
@@ -50,6 +53,10 @@
             flex-direction: column;
             margin-bottom: 100px;
         }
+        @media (min-width: 321px) and (max-width: 375px) {
+            flex-direction: column;
+            margin-bottom: 100px;
+        }
 
         .icons_current {
             display: flex;
@@ -60,6 +67,10 @@
                 flex-direction: column-reverse;
                 margin-bottom: 40px;
             }
+            @media (min-width: 321px) and (max-width: 375px) {
+                flex-direction: column-reverse;
+                margin-bottom: 40px;
+            }
 
             &:not(:last-child) {
                 margin-right: 90px;
@@ -67,6 +78,9 @@
                     margin-right: 60px;
                 }
                 @media (min-width: 376px) and (max-width: 430px) {
+                    margin-right: 0;
+                }
+                @media (min-width: 321px) and (max-width: 375px) {
                     margin-right: 0;
                 }
                 p {
@@ -92,6 +106,10 @@
                     height: 70px;
                 }
                 @media (min-width: 376px) and (max-width: 430px) {
+                    width: 150px;
+                    height: 150px;
+                }
+                @media (min-width: 321px) and (max-width: 375px) {
                     width: 150px;
                     height: 150px;
                 }
