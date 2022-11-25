@@ -29,7 +29,7 @@ const DetailPage = () => {
     }
     const removeItemFromBox = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
-        dispatch(removeFromBox(product?.id))
+        dispatch(removeFromBox(product?.id!))
     }
 
     const changeSize = (size: string) => {
